@@ -30,7 +30,7 @@ Este notebook implementa uma interface interativa para visualização e compara�
 
 ## ▶️ Como Usar
 
-1. Acesse o notebook no Google Colab.
+1. Acesse o notebook hospedado neste repositório e execute diretamente no Google Colab clicando [aqui](https://github.com/samuel-c-santos/Sentinel-Time-Viewer/blob/main/GEE_swipe.ipynb).
 2. Faça upload de um shapefile compactado (.zip).
 3. A aplicação centraliza o mapa e apresenta o controle deslizante.
 4. Escolha os anos desejados para visualização.
