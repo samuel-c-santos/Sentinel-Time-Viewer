@@ -1,54 +1,63 @@
-# Sentinel-Time-Viewer
-🛰️ Comparação temporal de imagens Sentinel‑2 com controle deslizante (swipe) e sobreposição vetorial usando Google Earth Engine e geemap.
+# Sentinel Time Viewer
 
-## ✨ Visão Geral
+Este repositório contém um notebook interativo para comparação temporal de imagens Sentinel-2, com controle deslizante e sobreposição de elementos vetoriais. A solução foi desenvolvida utilizando Google Earth Engine e geemap, com foco em análise visual de mudanças de cobertura e uso do solo ao longo do tempo.
 
-Este notebook implementa uma interface interativa para visualização e comparação temporal de imagens Sentinel‑2, usando Google Earth Engine (GEE) e a biblioteca geemap no Google Colab. A aplicação permite comparar dois anos distintos com controle deslizante (swipe) e exibe um contorno vetorial da área de interesse por cima das imagens.
+## Objetivo
 
-## 📂 Funcionalidades
+O projeto permite visualizar imagens de satélite em diferentes períodos e comparar áreas de interesse com maior facilidade. A interface facilita a identificação de mudanças temporais, especialmente em contextos de mapeamento ambiental e geoprocessamento.
 
-- Upload de shapefile (.zip) diretamente no Colab;
-- Filtragem automática de imagens Sentinel‑2 com menos de 10% de nuvens;
-- Seleção e visualização de imagens por ano;
-- Swipe interativo para comparação entre anos;
-- Contorno do polígono vetorial visível em todas as camadas.
+## Funcionalidades
 
-## 🛰️ Dados Utilizados
+• Upload de shapefile compactado em formato .zip diretamente no ambiente do Google Colab  
+• Filtragem automática de imagens Sentinel-2 com menos de 10% de nuvens  
+• Seleção de imagens por ano  
+• Comparação interativa entre períodos por meio de controle deslizante  
+• Exibição do contorno do polígono sobre as camadas de imagem  
 
-- [Sentinel‑2 Surface Reflectance](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR)
-  - Coleção: `COPERNICUS/S2_SR`
-  - Bandas: `B4 (Red), B3 (Green), B2 (Blue)`
+## Dados utilizados
 
-## 📌 Requisitos
+A aplicação utiliza imagens do produto Sentinel-2 Surface Reflectance, coleção COPERNICUS/S2_SR.
 
-- Conta Google Earth Engine
-- Google Colab
-- Bibliotecas:
-  - `earthengine-api`
-  - `geemap`
-  - `ipywidgets`
+Bandas principais:
+• B4: vermelho  
+• B3: verde  
+• B2: azul  
 
-## ▶️ Como Usar
+## Requisitos
 
-1. Acesse o notebook hospedado neste repositório e execute diretamente no Google Colab clicando [aqui](https://github.com/samuel-c-santos/Sentinel-Time-Viewer/blob/main/GEE_swipe.ipynb).
-2. Faça upload de um shapefile compactado (.zip).
-3. A aplicação centraliza o mapa e apresenta o controle deslizante.
-4. Escolha os anos desejados para visualização.
-5. O contorno vetorial do polígono será exibido por cima das imagens.
+• Conta ativa no Google Earth Engine  
+• Acesso ao Google Colab  
+• Bibliotecas Python:
+  • earthengine-api
+  • geemap
+  • ipywidgets  
 
-## 💡 Possíveis Extensões
+## Como executar
 
-- Inclusão de sensores Landsat (LC08, LC09, etc.);
-- Adição de índices espectrais (NDVI, NBR);
-- Exportação de imagens processadas;
-- Comparação por semestre ou por estação do ano.
+1. Acesse o notebook disponível neste repositório e execute o arquivo no Google Colab.
+2. Faça o upload do shapefile em formato .zip.
+3. O mapa será centralizado automaticamente e a ferramenta de comparação será iniciada.
+4. Selecione os anos desejados para a análise.
+5. O contorno do polígono será exibido sobre as imagens, permitindo a comparação visual entre os períodos.
 
-## 📷 Exemplo
+## Notebook
 
-![exemplo_swipe](exemplo_swipe.gif)
+O arquivo principal do projeto é:
+• GEE_swipe.ipynb
 
-## 👨‍💻 Autor
+## Possíveis extensões
 
-Samuel da Costa dos Santos  
-Especialista em Geoprocessamento | Regularização Ambiental | GEE & Python
+• Inclusão de sensores Landsat, como LC08 e LC09  
+• Cálculo de índices espectrais, como NDVI e NBR  
+• Exportação de imagens processadas  
+• Comparação por semestre ou por estação do ano  
 
+## Exemplo
+
+![Exemplo de comparação temporal](exemplo_swipe.gif)
+
+## Autor
+
+Samuel da Costa dos Santos
+
+Geoprocessamento | Regularização Ambiental | Google Earth Engine e Python
