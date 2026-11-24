@@ -35,7 +35,11 @@ O script interativo e organizado em seis celulas com interface grafica recolhida
 1. Instalacao de Dependencias: instala e atualiza bibliotecas necessarias.
 2. Autenticacao e GCP Project ID: campo de texto para definicao do identificador de projeto Google Cloud e inicializacao da sessao.
 3. Parametros de Processamento: definicao do percentual maximo de cobertura de nuvens aceito por cena, intervalo de meses para agregacao, basemap e estilizacao do contorno vetorial.
-4. Definicao da Area de Interesse: upload do arquivo vetorial (formato Shapefile compactado em .zip) ou selecao de poligono demonstrativo (Parque Estadual do Utinga).
+4. Definicao da Area de Interesse: definicao flexivel da AOI por quatro modalidades:
+   * **Upload de Shapefile (.zip)** com os componentes (.shp, .shx, .dbf, .prj);
+   * **Upload de KML / KMZ (.kml, .kmz)** com suporte a poligonos, linhas e pontos;
+   * **Digitar Coordenadas:** entrada direta de coordenadas em formato decimal (`lat, lon` ou `lon, lat`) com raio de buffer configuravel em metros (ex: 1000m);
+   * **Usar Poligono Demonstrativo:** teste imediato sobre o Parque Estadual do Utinga (Belem/PA).
 5. Visualizador Temporal (Swipe): consulta server-side no catalogo do GEE para identificar apenas os anos que possuem cenas validas no periodo e geracao da interface dividida com seletores de ano independentes e tela limpa sem sobreposicoes textuais obstrutivas.
 6. Exportador de Animacao em GIF: geracao de arquivo GIF animado com efeito swipe oscilante entre dois anos escolhidos, enquadramento paisagem 1,91:1 com compensacao latitudinal e margem de contexto, delimitacao vetorial preservada e ticker horizontal institucional fixo do NGEO na borda superior.
 
@@ -45,7 +49,7 @@ O script interativo e organizado em seis celulas com interface grafica recolhida
 2. Na celula 1, execute a instalacao das dependencias.
 3. Na celula 2, insira o ID do seu projeto Google Cloud no campo `GCP_PROJECT_ID` e execute a autenticacao.
 4. Na celula 3, defina o limiar maximo de nuvens e o mapa base desejado.
-5. Na celula 4, envie o arquivo .zip com o Shapefile contendo os arquivos .shp, .shx, .dbf e .prj.
+5. Na celula 4, escolha a modalidade desejada para a Area de Interesse: envie o `.zip` do Shapefile, o arquivo `.kml`/`.kmz`, digite as coordenadas decimais informando o raio de buffer (em metros), ou utilize o poligono demonstrativo. Execute a celula.
 6. Na celula 5, execute o visualizador. Os menus suspensos exibirao unicamente os anos com dados disponiveis. Mova o controle central para inspecionar a comparacao.
 7. Na celula 6, informe os dois anos que deseja confrontar, selecione a resolucao horizontal desejada (padrao 1200 x 628 px) e execute a geracao do GIF animado com download automatico.
 
